@@ -30,3 +30,12 @@ const team = [
       image: 'barbara-ramos-graphic-designer.jpg',
     },
   ];
+
+  //- Tramite un ciclo for scorro nell'array team, con il ciclo for in vado a scorrere in ciascun oggetto dell'array e ne stampo il contenuto in console
+
+  for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+    for (const key in member) {
+       console.log(member[key]);
+    }
+  }
