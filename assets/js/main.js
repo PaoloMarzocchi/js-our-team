@@ -37,7 +37,11 @@ const rowEl = document.querySelector('.row');
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
     //- Seleziono le informazioni da stampare come nel punto 1, per stamparle nella DOM mi serve aggiungere il markup nel ciclo for dell'array per creare degli elementi in pagina che racchiudano le informazioni 
-    let markup = `<div class="col-4"><div class="card"><h3>${member.name}</h3><h5>${member.role}</h5><div>${member.image}</div></div></div>`;
+    
+    //- Eseguo il procedimento come il punto 2 solo che nel markup andrò a creare il tag dell'immagine con il percorso ma il nome dell'immagine sarà preso dalla proprietà dell'oggetto dell'array
+    let markup = `<div class="col-4"><div class="card text-center">
+    <img class="mw-100 rounded-top-1" src="./assets/img/${member.image}" alt="">
+    <h5 class="py-2">${member.name}</h5><h6>${member.role}</h6></div></div>`;
     rowEl.insertAdjacentHTML('beforeend', markup);
 }
 
